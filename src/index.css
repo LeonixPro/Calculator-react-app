@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+* {
+  padding: 0;margin: 0;box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: var(--main);font-family: Tahoma, sans-serif;color: var(--dark);
+  display: flex;justify-content: center;align-items: center;
+}
+:root {
+  --white: #fff;
+  --main: #eee;
+  --light: #f5f5f5;
+  --dark: #333;
+  --gray: #ccc;
+  --header: #3c2fc9;
+  --light-dark: #525252;
+  --black: #000;
+}
+.calculator_wrap {
+  width: 240px;height: 500px;border-radius: 20px;overflow: hidden;
+  border: 8px solid var(--dark);box-shadow: 0 2px 30px var(--gray);
+}
+.date {
+  background: var(--black);color: var(--white);font-size: 10px;padding: 4px 0 4px 10px;
+}
+.display {
+  background: #5a0027;color: var(--white);min-height: 160px;
+  display: flex;align-items: flex-end;flex-direction: column-reverse;
+  padding: 5px 15px 5px 10px;
+}
+.data {color: var(--gray);}
+.total {
+  font-size: 32px;font-weight: bold;
+}
+.action_buttons {
+ border-top-left-radius: 20px;border-top-right-radius: 20px;height: 60px;
+ display: grid;grid-template-columns: 1fr 1fr 1fr 1fr 1fr;border-bottom: 1px solid var(--gray);
+}
+.action_buttons button {
+  font-family: 'Voces', cursive;font-weight: bold;border: none;outline: none;cursor: pointer;
+  background: transparent;color: var(--white);transition: .5s;font-size: 18px;
+}
+.action_buttons button:active {background: #6d0130;}
+.digits, .bottom_buttons {display: grid;grid-template-columns: 1fr 1fr 1fr}
+.digits button, .bottom_buttons button {
+  font-family: 'Voces', cursive;font-weight: bold;border: none;outline: none;cursor: pointer;
+  height: 62px;font-size: 18px;background: transparent;color: var(--white);
+  transition: .5s;
+}
+.digits button:active, .bottom_buttons button:active {
+  background: #6d0130;
+}
+.buttons {
+  background: rgb(125,5,57);
+background: -moz-linear-gradient(180deg, rgba(125,5,57,1) 0%, rgba(219,18,105,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(125,5,57,1) 0%, rgba(219,18,105,1) 100%);
+background: linear-gradient(180deg, rgba(125,5,57,1) 0%, rgba(219,18,105,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7d0539",endColorstr="#db1269",GradientType=1);
+}
+.action_buttons button:hover, .digits button:hover, .bottom_buttons button:hover {background: #5a0027;}
+.bottom_text {
+  font-family: Calibri, sans-serif;
+  color: var(--light-dark);
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}
+
